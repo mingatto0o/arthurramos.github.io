@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monitores</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <script language="javascript" type="text/javascript">
+		function validar(){
+			var nome=form1.nome.value;
+			var endereco=form1.endereco.value;
+			var telefone=form1.fone.value;
+			var email=form1.email.value;
+			
+			if(nome.length<5){
+				alert('Por favor, preencha o campo com seu nome completo.');
+				form1.nome.focus();
+			return false;
+			}
+			
+			if(endereco==""){
+				alert('Por favor, preencha o campo com seu endereço.');
+				form1.endereco.focus();
+			return false;
+			}
+			
+			if(telefone==""){
+				alert('Por favor, preencha o campo com seu telefone.');
+				form1.fone.focus();
+			return false;
+			}
+			
+			if(email==""){
+				alert('Por favor, preencha o campo com seu endereço de email.');
+				form1.email.focus();
+			return false;
+			}
+        }
+            </script>
+            <link rel="icon" type="image/jpg" href="images/icon.png" />
+			<link rel="stylesheet" type="text/css" href="estilizacao.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav>
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <a href="sobre.html"><li>Sobre</li></a>
+                <a href="modelos.html"><li>Modelos</li></a>
+                <a href="contato.html"><li>Contato</li></a>
+            </ul>
+        </nav>
+    </header>
+    <h1 align="center">Contate-nos:</h1>
+    <br><br><br><br><br>
+    <form name="form1" method="get" action="fimform.html">
+            Nome:<br> <input type="text" name="nome"> <br><br>
+			Endereco:<br> <input type="text" name="endereco"> <br><br>
+			Telefone:<br> <input type="text" name="fone"> <br><br>
+			Email:<br> <input type="text" name="email"> <br><br>
+            Dúvidas:<br> <textarea cols=“50” rows=“25” name="info" placeholder="Digite sua dúvida aqui"></textarea>
+            <br><br>
+			<input class="limpa" type="reset" value="limpar">
+            <input class="envia" type="submit" onclick = "return validar()" value="enviar">
+    </form> 
+    <footer class="rodape">
+        <h5>Arthur Ramos 2023-&copyTodos os direitos reservados</h5>
+    </footer>
+</body>
+</html>
